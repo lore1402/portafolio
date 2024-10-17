@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Mi Portafolio</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet"/>
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+
+    <!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+    <style>
+.section1 {
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+      .card video {
+          width: 237px;
+          margin-top: 35px;
+      }
+
+      .card2 video {
+          width: 237px;
+          margin-top: 35px;
+      }
+
+      .card3 img {
+          width: 300px;
+          margin-top: 35px;
+      }
+  </style>
+  
+  </head>
+
+  <body>
+    <header> 
+    <img src="images/lorena.WebP" alt="Lorena" class="header-img" />
+    <h1 class="header">Lorena Castro</h1>
+    <h2 class="subtitle">Maquiladora Y Ingeniera De Sistemas </h2>
+    <nav  >
+        <ul class="navigation">
+          <li class="nav-item"><a href="#acerca-de">Acerca de</a></li>
+            <li class="nav-item"> <a href="#Mis-Proyectos"> Mis Proyectos</a></li>
+            <li class="nav-item"> <a href="#Contacto"> Contacto </a></li>
+        </ul>
+    </nav>
+    </header>
+
+<main>
+    <section>
+      <h2 id="acerca-de" class="header">Acerca De Mí</h2>
+    <p class="intro">
+      Hola! Soy Lorena 👋 Soy Colombiana, amo los gatos y tambien hacer maquillajes Geniales 😍 Después de estudiar Ingenieria de sistemas en la universidad y Maquillaje Profesional, llevo un poco mas de un año como maquilladora y dos años como ingeniera de sistemas.
+      Sueño con una web donde todo el mundo pueda participar. Aquí puedes ver algunos de mis proyectos recientes y también puedes contactarme por si quieres hablar de tecnología, maquillajes o gatos!
+    </p>
+    <ul class="social-media">
+
+        <li>
+          <a href="https://twitter.com/?lang=es" target="_blank"
+            ><img src="./images/X.png" alt="Logo De Twitter"
+          /> <p class="social-media-text">Twitter</p>
+        </a> 
+        </li>
+        <li>
+          <a href="https://github.com/lore1402" target="_blank"
+            ><img src="images/Git.png" alt="Logo De GitHub"
+          />  <p class="social-media-text">Github</p> </a>
+        </li>
+        <li>
+          <a href="https://co.linkedin.com/" target="_blank"
+            ><img src="images/Lin.png" alt="Logo De Linkedin"
+          /> <p class="social-media-text">Linkedin</p> </a> 
+        </li>
+
+    </ul>
+    </section>
+   
+    
+    <section>
+        <h2 class="header" id="Mis-Proyectos"> Mis Proyectos </h2>
+        <section class="section1">
+          <div class="card">
+              <video src="https://videos.pexels.com/video-files/9143067/9143067-uhd_1440_2732_25fps.mp4" controls> </video>
+          </div>
+          <div class="card3">
+              <img src="https://images.pexels.com/photos/27357334/pexels-photo-27357334/free-photo-of-dos-mitades-una-moneda.jpeg?auto=compress&amp" alt="Gratis Dos Mitades, Una Moneda Foto de stock" />
+          </div>
+          <div class="card2">
+              <video src="https://videos.pexels.com/video-files/6916386/6916386-uhd_1440_2732_30fps.mp4" controls>
+              </video>
+          </div>
+        </section>
+        <div class="carousel">
+      <button class="arrow arrow-left" aria-label="Backward Button"></button>
+      <div class="window">
+        <ul class="project-container">
+          <li  class="project1-container" > <button class="project1 project" ><img src="images/proyecto1.jpg" alt="Mi primer proyecto" class="project-img"></button></li>
+          <li class="project2-container"> <button class="project2 project" ><img src="images/proyecto2.jpg" alt="Mi segundo proyecto" class="project-img"></button></li>
+          <li class="project3-container"> <button class="project3 project" ><img src="images/proyecto3.jpg" alt="Mi tercer proyecto" class="project-img"></button></li>
+          <li class="project4-container" aria-hidden="true" > <button class="project4 project"><img src="images/proyecto4.jpg" alt="Mi cuarto proyecto" class="project-img" tabindex="-1" ></button></li>
+          <li  class="project5-container" aria-hidden="true"> <button class="project5 project"><img src="images/proyecto5.jpg" alt="Mi quinto proyecto"  class="project-img" tabindex="-1" ></button></li>
+        </ul>
+      </div>
+      <button class="arrow arrow-right" aria-label="Forward Button"></button>
+    </div>
+
+    </section>
+</main>
+<h2 class="calendar-title">Calendario de Eventos</h2>
+<div id="calendar"></div>
+
+    <footer class="contact-section">
+      <h2 class="header" id="Contacto">Contacto</h2>
+      <p class="intro">Para manderme un mensaje puedes usar el formulario que sigue</p>
+      <form class="form-container">
+       <label class="form-label">Nombre</label> <input type="text"  aria-label="Nombre" id="name"/>
+       <span id="name-error"></span>
+        <br />
+       <label class="form-label" >Correo</label><input type="text" aria-label="Correo"/> <br />
+        <label class="message-input">Mensaje<input type="text" /> <br /><label>
+        <button class="send-button">Enviar</button>
+        </form>
+    </footer>        
+
+</div>
+
+<!-- Modal -->
+<div id="eventModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="eventTitle"></h2>
+    <p id="eventDate"></p>
+  </div>
+</div>
+
+<div class="notification" aria-live="assertive"></div>
+
+<div class="modal-container">
+  <div class="modal">
+    <h2 class="header-modal" id="modal-header" tabindex="0">Ejemplo de un proyecto mio</h2>
+    <img src="images/proyecto1.jpg" class="modal-project-image1" alt="un pantallazo de mi project"/>
+    <button class="modal-button">Cerrar</button>
+  </div>
+</div>
+
+
+
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
