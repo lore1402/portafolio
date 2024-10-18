@@ -1,4 +1,4 @@
-/* css reset */
+/* CSS Reset */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -91,7 +91,7 @@ nav {
   display: flex;
   justify-content: space-around;
   margin: 24px auto;
-  width: 50%;
+  width: 100%;
 }
 
 .nav-item a {
@@ -103,134 +103,84 @@ nav {
   align-items: center;
   border-radius: 5px;
   display: flex;
-  height: 30px;
+  height: auto; 
   justify-content: center;
-  width: 33%;
+  padding: 10px;
+  flex: 1; 
 }
 
 .nav-item:hover, .nav-item:hover a {
   background: linear-gradient(50deg, rgba(155,114,182,1) 29%, rgba(146,171,236,1) 49%, rgba(58,100,195,1) 71%);
   color: #000;
-  cursor: pointer;
 }
 
 .nav-item:focus-within {
   background-color: var(--verde); 
 }
- 
+
 .nav-item a:focus {
   outline: none;
   color: var(--gris-oscuro);
 }
 
 .intro {
-  margin: 24px 196px;
+  margin: 24px;
+  text-align: center; 
 }
 
 .social-media {
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; 
   margin: 32px auto 0;
-  width: 30%;
+  width: 100%; 
+}
+
+.social-media li {
+  margin: 0 10px; 
 }
 
 .social-media li a {
-  align-items: center;
-  display: flex;
   color: var(--blanco);
   text-decoration: none;
-  width: max-content;
-}
-
-.social-media li a:focus {
-  outline: none;
-}
-
-.social-media li:focus-within {
-  outline: 3px solid var(--verde);
-  padding: 8px;
-}
-
-.social-media-text {
-  padding-right: 8px;
-  padding-left: 8px;
 }
 
 .carousel {
-  align-items: center;
   display: flex;
+  align-items: center;
   margin: 48px 0 64px;
+  overflow: hidden; /* Mantener el overflow oculto */
 }
 
 .window {
   overflow: hidden;
-  width: 100%; /* Cambiado a 100% para responsividad */
-  max-width: 815px; /* Establece un ancho máximo */
+  width: 100%;
+  max-width: 815px; 
   padding: 8px;
 }
 
 .project-container {
-  left: 0;
-  position: relative;
-  display: flex; /* Asegúrate de que los proyectos estén en una fila */
-  width: fit-content; /* Cambiado para permitir que el contenido ajuste su tamaño */
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
 }
 
 .project-container li {
-  display: inline-block;
-}
-
-.project-container button {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.project-container button:focus-within {
-  outline: 3px solid var(--verde);
+  margin: 10px; 
 }
 
 .project-img {
   border-radius: 5px;
   border: 2px solid #000;
-  display: inline-block;
-  height: 400px;
-  margin: 0 8px;
+  height: auto; 
+  width: 100%; 
+  max-width: 250px; 
   transition: all 0.2s ease-in-out;
-  width: 250px;
-  object-fit: cover;
 }
 
 .project:hover {
   cursor: pointer;
-  transform: scale(1.1);
-}
-
-.arrow {
-  height: 75px;
-  transition: all 0.2s ease-in-out;
-  width: 75px;
-}
-
-.arrow:hover {
-  transform: scale(1.1);
-}
-
-.arrow-left {
-  background: center / contain no-repeat url(./images/play-button-left.png);
-  background-color: var(--verde);
-  border-radius: 50%;
-}
-
-.arrow-right {
-  background: center / contain no-repeat url(./images/play-button-right.png);
-  background-color: var(--verde);
-  border-radius: 50%;
-}
-
-.arrow:focus {
-  outline: 3px solid var(--verde);
+  transform: scale(1.05); 
 }
 
 .contact-section {
@@ -243,16 +193,13 @@ nav {
 .form-container {
   display: flex;
   flex-direction: column;
-  width: 30%;
-}
-
-.message-input input {
-  height: 150px;
-  margin-bottom: 16px;
+  width: 100%; 
+  max-width: 400px; 
 }
 
 input {
   width: 100%;
+  padding: 10px; 
 }
 
 input:focus {
@@ -275,55 +222,19 @@ input:focus {
   cursor: pointer;
 }
 
-.modal-button {
-  align-items: center;
-  background-color: var(--gris-medio);
-  border-radius: 15px;
-  color: white;
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  margin-bottom: 48px;
-  width: 150px;
-  font-size: 16px;
-}
-
-.send-button:focus, .modal-button:focus {
+.send-button:focus {
   border: 5px solid var(--gris-oscuro);
   outline: 3px solid var(--verde);
 }
 
-#name-error {
-  color: #000;
-}
-
-.notification {
-  align-items: center;
-  background: linear-gradient(50deg, rgba(155,114,182,1) 29%, rgba(146,171,236,1) 49%, rgba(58,100,195,1) 71%);
-  border-radius: 10px;
-  box-shadow: 8px 16px 32px 0px var(--shadow);
-  color: #000;
-  display: none;
-  height: 50px;
-  justify-content: center;
-  position: fixed;
-  right: 24px;
-  top: 24px;
-  width: 300px;
-}
-
 .modal-container {
   align-items: center;
-  background-color: rgba(000, 000, 000, 0.2);
+  background-color: rgba(000, 000, 000, 0.5);
   display: none;
   height: 100vh;
   justify-content: center;
   position: fixed;
   width: 100vw;
-}
-
-#modal-header {
-  outline: 3px solid var(--verde);
 }
 
 .modal {
@@ -333,48 +244,74 @@ input:focus {
   border: 2px solid #000;
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: auto; 
+  max-height: 80%; 
   justify-content: center;
-  position: fixed;
-  top: 5%;
-  width: 700px;
+  width: 90%; 
   padding: 56px;
 }
 
-.modal-project-image1 {
-  background: center / cover no-repeat url(./images/project1.png);
-  border-radius: 5px;
-  border: 2px solid #000;
-  height: 400px;
-  margin: 16px;
+/* Contenedor del calendario */
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsividad para dispositivos móviles */
+/* Media Queries */
 @media (max-width: 768px) {
+  .header {
+    font-size: 36px; 
+  }
+
+  .nav-item {
+    padding: 10px 5px; 
+  }
+
   .project-img {
-    height: 250px; /* Ajusta la altura para dispositivos móviles */
-    width: 150px; /* Ajusta el ancho para dispositivos móviles */
-  }
-
-  .window {
-    width: 90%; /* Ajusta el ancho del carrusel para móviles */
-  }
-
-  .carousel {
-    flex-direction: column; /* Cambia la dirección a columna para móviles */
-    align-items: center; /* Centra el contenido en móviles */
-  }
-
-  .navigation {
-    width: 100%; /* Ajusta la navegación a ancho completo */
-    margin: 16px 0; /* Espaciado vertical entre elementos */
-  }
-
-  .social-media {
-    width: 80%; /* Ajusta el ancho para la sección de redes sociales */
+    width: 100%; 
+    height: auto; 
+    max-width: 200px; 
   }
 
   .form-container {
-    width: 80%; /* Ajusta el ancho del formulario para móviles */
+    width: 90%; 
+  }
+
+  .carousel {
+    flex-direction: column; /* Cambiado a columna en pantallas más pequeñas */
+    align-items: center; /* Centra los elementos en columnas */
+  }
+
+  .window {
+    max-width: 100%; /* Asegúrate de que la ventana del carrusel ocupe el 100% */
   }
 }
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 28px; 
+  }
+
+  .social-media {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .social-media li {
+    margin: 5px 0; 
+  }
+
+  .project-container {
+    flex-direction: column; 
+  }
+
+  .modal {
+    width: 100%; 
+    max-width: none; 
+  }
+}
+
